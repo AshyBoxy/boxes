@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "boxes",
+	"version": "${version}",
+	"name": "Boxes",
+	"description": "idk some very fun mod or something",
+	"authors": [
+		"AshyBoxy",
+		"Rosellei"
+	],
+	"contact": {
+		"homepage": "https://github.com/AshyBoxy/boxes",
+		"sources": "https://github.com/AshyBoxy/boxes"
+	},
+	"license": "All Rights Reserved",
+	"icon": "assets/boxes/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"xyz.ashyboxy.boxes.Boxes"
+		],
+		"client": [
+			"xyz.ashyboxy.boxes.BoxesClient"
+		],
+		"fabric-datagen": [
+			"xyz.ashyboxy.boxes.BoxesDataGenerator"
+		]
+	},
+	"mixins": [
+		"boxes.mixins.json",
+		{
+			"config": "boxes.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
